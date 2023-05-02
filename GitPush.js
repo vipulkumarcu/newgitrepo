@@ -1,0 +1,1 @@
+console.log ("Pushing my first JS file on git using commandline");
