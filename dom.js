@@ -32,11 +32,27 @@ head2.style.fontWeight = "bold";
 //     items[i].style.fontWeight = "bold";
 // }
 
-var li = document.getElementsByTagName("li");
+// var li = document.getElementsByTagName("li");
 
-li[2].style.backgroundColor = "green";
+// li[2].style.backgroundColor = "green";
 
-for (var i = 0; i < li.length; i++)
+// for (var i = 0; i < li.length; i++)
+// {
+//     li[i].style.fontWeight = "bold";
+// }
+
+var items = document.querySelectorAll (".list-group-item");
+items[1].style.color = "green";
+
+// for(var i = 0; i < items.length; i=i+2)
+// {
+//     items[i].style.backgroundColor = "green";
+// }
+
+var odd = document.querySelectorAll ("li:nth-child(odd)");
+
+for (var i = 0; i < odd.length; i++)
 {
-    li[i].style.fontWeight = "bold";
+    odd[i].style.backgroundColor = "green";
 }
+
