@@ -41,18 +41,34 @@ head2.style.fontWeight = "bold";
 //     li[i].style.fontWeight = "bold";
 // }
 
-var items = document.querySelectorAll (".list-group-item");
-items[1].style.color = "green";
+// var items = document.querySelectorAll (".list-group-item");
+// items[1].style.color = "green";
 
-// for(var i = 0; i < items.length; i=i+2)
+// // for(var i = 0; i < items.length; i=i+2)
+// // {
+// //     items[i].style.backgroundColor = "green";
+// // }
+
+// var odd = document.querySelectorAll ("li:nth-child(odd)");
+
+// for (var i = 0; i < odd.length; i++)
 // {
-//     items[i].style.backgroundColor = "green";
+//     odd[i].style.backgroundColor = "green";
 // }
 
-var odd = document.querySelectorAll ("li:nth-child(odd)");
+var itemList = document.querySelector("#items");
 
-for (var i = 0; i < odd.length; i++)
-{
-    odd[i].style.backgroundColor = "green";
-}
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = "#f4f4f4";
 
+itemList.parentElement.style.backgroundColor = "#f4f4f4";
+
+var newDiv = document.createElement ("div");
+newDiv.className = "hello";
+newDiv.id = "hello1";
+newDiv.setAttribute ("title", "Hello Div");
+var newDivText = document.createTextNode ("Hello World");
+newDiv.appendChild (newDivText);
+var container = document.querySelector ("header .container");
+var h1 = document.querySelector ("header h1");
+container.insertBefore (newDiv, h1);
