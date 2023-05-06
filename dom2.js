@@ -16,18 +16,28 @@ function addItem(e){
   // Get input value
   var newItem = document.getElementById('item').value;
 
+  var newItemDescription = document.getElementById('itemDescription').value;
+
+  // console.log (newItemDescription);
+
   // Create new li element
   var li = document.createElement('li');
+
   // Add class
   li.className = 'list-group-item';
+
   // Add text node with input value
-  li.appendChild(document.createTextNode(newItem));
+  li.appendChild(document.createTextNode(newItem + " " + newItemDescription));
+
+  // li.appendChild(document.createTextNode(newItem + " "));
+
+  // li.appendChild(document.createTextNode(newItemDescription));
 
   // Create del button element
   var deleteBtn = document.createElement('button');
 
   // Add classes to del button
-  deleteBtn.className = 'btn btn-danger btn-sm float-none delete';
+  deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
 
   // Append text node
   deleteBtn.appendChild(document.createTextNode('X'));
@@ -39,7 +49,7 @@ function addItem(e){
   var editBtn = document.createElement('button');
 
   // Add classes to edit button
-  editBtn.className = 'btn btn-success float-md-right edit';
+  editBtn.className = 'btn btn-primary btn-sm float-sm-right edit';
 
   // Append text node
   editBtn.appendChild(document.createTextNode('Edit'));
